@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Game Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+</head>
+<body>
+  <!-- title -->
+  <div id="title">
+    <a href="index.html"><img src = "Photos/Logo.png" id="game-logo"></h1></a>
+  </div>
+  <div id="game-instruct">Guess where the photographer is STANDING.</div>
+  <!-- points and rounds display -->
+  <div class="points-container">
+    <div class="points">  
+      <div>
+        <div id="rounds"></div>
+        <div id="totalPoints"> Total: 0/500</div>
+      </div>
+    </div>
+  </div>
+  <!-- Image display -->
+  <div id="content">
+    <div id="picture">
+      <img src="Photos/Campus.jpg">
+    </div>
+    <!-- Maps -->
+      <div id="map">
+    <!-- Collapsable menu for map modes -->
+        <div class = "menu">
+          <button class="collapsible">Mode</button>
+          <div class="menucontent">
+            <figure class = "menu-element" onclick="changeToDefault()">
+              <img src="Photos/default.png">
+              <figcaption>Default</figcaption>
+            </figure>
+            <figure class = "menu-element" onclick = "changeToSatilite()">
+              <img src="Photos/satilite.png">
+              <figcaption>Satilite</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id = "buttonDiv">
+    <div id="score"></div>
+    <div id = "distance"></div>
+    <button id = "button" type="button">Submit Guess</button>
+  </div>
+  <!-- Sumamry page -->""
+  <div id = "summary-page">
+    <div id = "summary-content">
+      <h1 id = score-Display></h1>
+      <button id = "summary-button">Play Again</button>
+    </div>
+  </div>
+  <!-- Map Library -->>  
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
