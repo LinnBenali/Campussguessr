@@ -20,7 +20,8 @@
     - Ensure Leaflet library is included in the webpage.
 
     Dependencies:
-    - Leaflet.js: https://leafletjs.com/
+    - https://leafletjs.com/
+    - confetti-js
 
 */
 let latAnswer = 59.346883;
@@ -69,89 +70,88 @@ function changeToSatilite(){
   defaultLayer.remove(); 
   isSatlite = true;
 }
-
 //Information about all photos written in JSON
 var photos = [
     {
-        "name": "photo1.jpg", "latitude":59.347925, "longitude":18.073141,"description": "The last letters of 'BIBLIOTEK', from the KTH library y'know beside the entry."
+        "name": "photo1.jpg", "latitude":59.347925, "longitude":18.073141
     },
     {
-        "name": "photo2.jpg","latitude":59.348321, "longitude":18.073069, "description": "A ballon-statue? Either way a metal statue beside the library on the way to Alvensalen."
+        "name": "photo2.jpg","latitude":59.348321, "longitude":18.073069
     },
     {
-        "name": "photo3.jpg", "latitude":59.350163, "longitude":18.066736, "description": "Artwork in the Q-building."
+        "name": "photo3.jpg", "latitude":59.350163, "longitude":18.066736
     },
     {
-        "name": "photo4.jpg", "latitude":59.347694, "longitude":18.073064, "description": "An epsilon sign in front of TOLVAN, elektros clubhouse."
+        "name": "photo4.jpg", "latitude":59.347694, "longitude":18.073064
     },
     {
-        "name": "photo5.jpg", "latitude":59.347955, "longitude":18.072942,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo5.jpg", "latitude":59.347955, "longitude":18.072942
     },
     {
-        "name": "photo6.jpg", "latitude":59.347076, "longitude":18.071335,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo6.jpg", "latitude":59.347076, "longitude":18.071335
     },
     {
-        "name": "photo7.jpg", "latitude":59.348104, "longitude":18.074815,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo7.jpg", "latitude":59.348104, "longitude":18.074815
     },
     {
-        "name": "photo8.jpg", "latitude":59.348059, "longitude":18.074828,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo8.jpg", "latitude":59.348059, "longitude":18.074828
     },
     {
-        "name": "photo9.jpg", "latitude":59.350208, "longitude":18.069746, "description": "An epsilon sign in front of TOLVAN, elektros clubhouse."
+        "name": "photo9.jpg", "latitude":59.350208, "longitude":18.069746
     },
     {
-        "name": "photo10.jpg", "latitude":59.351034, "longitude":18.069706,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo10.jpg", "latitude":59.351034, "longitude":18.069706
     },
     {
-        "name": "photo11.jpg", "latitude":59.347765, "longitude":18.070864,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo11.jpg", "latitude":59.347765, "longitude":18.070864
     },
     {
-        "name": "photo12.jpg", "latitude":59.346671, "longitude":18.072299,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo12.jpg", "latitude":59.346671, "longitude":18.072299
     }, 
     {
-        "name": "photo13.jpg", "latitude":59.352784, "longitude":18.066720, "description": "An epsilon sign in front of TOLVAN, elektros clubhouse."
+        "name": "photo13.jpg", "latitude":59.352784, "longitude":18.066720
     },
     {
-        "name": "photo14.jpg", "latitude":59.353641, "longitude":18.065418,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo14.jpg", "latitude":59.353641, "longitude":18.065418
     },
     {
-        "name": "photo15.jpg", "latitude":59.347786, "longitude":18.074057,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo15.jpg", "latitude":59.347786, "longitude":18.074057
     },
     {
-        "name": "photo16.jpg", "latitude":59.347050, "longitude":18.072760,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo16.jpg", "latitude":59.347050, "longitude":18.072760
     },
     {
-        "name": "photo17.jpg", "latitude":59.353382, "longitude":18.065060,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo17.jpg", "latitude":59.353382, "longitude":18.065060
     },
     {
-        "name": "photo18.jpg", "latitude":59.353576, "longitude":18.065330,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo18.jpg", "latitude":59.353576, "longitude":18.065330
     },
     {
-        "name": "photo19.jpg", "latitude":59.348000, "longitude":18.073459,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo19.jpg", "latitude":59.348000, "longitude":18.073459
     }, 
     {
-        "name": "photo20.jpg", "latitude":59.350308, "longitude":18.066744, "description": "An epsilon sign in front of TOLVAN, elektros clubhouse."
+        "name": "photo20.jpg", "latitude":59.350308, "longitude":18.066744
     },
     {
-        "name": "photo21.jpg", "latitude":59.350270, "longitude":18.066752,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo21.jpg", "latitude":59.350270, "longitude":18.066752
     },
     {
-        "name": "photo22.jpg", "latitude":59.348172, "longitude":18.074335,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo22.jpg", "latitude":59.348172, "longitude":18.074335
     },
     {
-        "name": "photo23.jpg", "latitude":59.347290, "longitude":18.071549,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo23.jpg", "latitude":59.347290, "longitude":18.071549
     }, 
     {
-        "name": "photo24.jpg", "latitude":59.347185, "longitude":18.072821, "description": "An epsilon sign in front of TOLVAN, elektros clubhouse."
+        "name": "photo24.jpg", "latitude":59.347185, "longitude":18.072821
     },
     {
-        "name": "photo25.jpg", "latitude":59.347533, "longitude":18.075175,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo25.jpg", "latitude":59.347533, "longitude":18.075175
     },
     {
-        "name": "photo26.jpg", "latitude":59.347569, "longitude":18.075088,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo26.jpg", "latitude":59.347569, "longitude":18.075088
     },
     {
-        "name": "photo27.jpg", "latitude":59.347644, "longitude":18.075827,"description": "The stairs in the KTH library on the first floor. Very interesting ._."
+        "name": "photo27.jpg", "latitude":59.347644, "longitude":18.075827
     }
 ];
 
@@ -349,13 +349,33 @@ document.getElementById('button').addEventListener('click', function() {
         if(rounds === 5){
             document.getElementById("summary-page").style.display = "flex";
             document.getElementById('score-Display').textContent = "Score:" + totalPoints + "/500" ;
-            // window.location.href = "summary.html";
             totalPoints = 0;
+        //fireworks at the end, the following code is from https://www.kirilv.com/canvas-confetti/
+        var duration = 15 * 100;
+        var animationEnd = Date.now() + duration;
+        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+        
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+        
+        var interval = setInterval(function() {
+          var timeLeft = animationEnd - Date.now();
+        
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+        
+          var particleCount = 50 * (timeLeft / duration);
+          // since particles fall down, start a bit higher than random
+          confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+          confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+        }, 250);
             stopPrintTotalPoints();
             emptyCoordinateMap();
         }
-        document.getElementById('score').textContent = " ";
-        document.getElementById('distance').textContent = " ";  
+        document.getElementById('score').textContent = "";
+        document.getElementById('distance').textContent = "";  
         increaseRounds();
         //choose new random photo
         let chosenRandomPhoto = chooseRandomPhoto(photos);
