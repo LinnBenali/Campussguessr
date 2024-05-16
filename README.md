@@ -14,7 +14,7 @@ The project will be divided into four weeks: planning week, developing week, rev
 
 ### How to install/use project
 Access to the project will likely be provided through a GitHub URL. Specific installation and usage instructions will be provided once finalized.
-The website can be accessed here: https://gits-15.sys.kth.se/pages/lbenali/Inda-Projekt/
+The website can be accessed here: https://gits-15.sys.kth.se/pages/lbenali/Inda-Projekt/ or https://campusguessr.se/ . 
 
 ### Libraries
 The Leaflet library will be utilized to create an interactive map within the game.
