@@ -24,8 +24,8 @@ body, html {
 #title {
   text-align: center;
   margin: 10px 0;
-  color: #004791;
 }
+
 
 #big-title{
   text-align: center;
@@ -39,7 +39,7 @@ body, html {
   text-align: center;
   margin-top: 10px;
   color: #09437e;
-  font-size: 23px;
+  font-size: 22px;
 }
 
 h1{
@@ -49,27 +49,30 @@ h1{
 }
 
 p{
-  font: 20px "Pixelify Sans", sans-serif;
+  font: 20px Verdana, sans-serif ;
+  font-style: oblique;
+  font-weight: 500;
 }
 #game-logo{
+  position: relative;
   width: 400px;
   margin-top: 17px;
-  
+  z-index: 9999;
 }
 #title-logo{
   width: 600px;
   margin-top: 200px;
-  
 }
 
 #game-instruct{
   position:absolute;
-  top: 80px;
-  left: 30px;
+  top: 90px;
+  left: 50px;
   width: 400px;
   text-align: center;
-  color: #09437e;
-  font: 16px "Pixelify Sans", sans-serif;
+  color: #000000;
+  font: 16px "Verdana", sans-serif;
+  font-style: oblique;
 }
 
 #picture, #map {
@@ -112,6 +115,17 @@ img {
     border-radius: 10px;
     height: 60px;
     width: 300x;
+    border: 2px solid black;
+}
+
+#play-button {
+  background-color: #004791;
+  color: #FFFFFF;
+  font: 24px "Pixelify Sans", sans-serif;
+  padding: 8px 20px;
+  margin-bottom: 50px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 #rounds{
@@ -130,7 +144,7 @@ img {
 #distance {
   position: absolute;
   top: 650px;
-  right: 730px;
+  left: 130px;
   text-align: center;
   padding-top: 10px;
   height: 20px;
@@ -170,36 +184,6 @@ img {
   margin: 50px; 
 }
 
-.navbar{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar ul{
-  display: none;
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.navbar a{
-  color: #000;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0px 100px;
-  display: block;
-  text-align: center;  
-}
-
-.navbar a:hover{
-  font-weight: bold;
-}
-
-.navbar li{
-  float: left;
-}
-
 /* collapsable menu map modes */
 
 .menu {
@@ -208,18 +192,20 @@ img {
   right: 10px;
   color: #444;
   cursor: pointer;
-  padding: 5px;
+  padding: 0px;
   border: none;
   text-align: right;
   outline: none;
-  font-size: 15px;
   z-index: 1000;
+}
+#map-icon {
+  height: 30px;
 }
 .collapsible{
   background-color: #f8f8f8;
   color: #000000;
   font: 17px "Pixelify Sans", sans-serif;
-  padding: 7px 25px;
+  padding: 5px 10px;
   margin: 0px;
   border-radius: 7px;
   border: 2px solid grey;
@@ -260,7 +246,7 @@ figcaption{
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    z-index: 9999;
+    z-index: 7000;
     /* background-color: rgba(255, 255, 255, 0.8); */
 }
 
@@ -269,11 +255,32 @@ figcaption{
   position: fixed;
   display: none;
   justify-content: center; 
-  align-items: center; 
   top: 0px;
   left: 0px;
   background-color: #DEF0FF;
   width: 100%;
   height: 100%;
-  z-index: 9998;
+  z-index: 8000;
+}
+
+#summary-button{
+    background-color: transparent;
+    color: #000;
+    font: 22px "Verdana", sans-serif;
+    font-weight: 400;
+    height: 60px;
+    width: 150px;
+    border-radius: 10px;
+    border-color: #00000070;
+    border: none;
+}
+
+#summary-button:hover{
+  background-color: #94aeca;
+}
+
+#score-Display{
+  margin: 105px;
+  font: 45px "Verdana", sans-serif;
+  font-weight: 600;
 }
