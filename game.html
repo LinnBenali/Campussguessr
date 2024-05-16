@@ -10,7 +10,7 @@
 <body>
   <!-- title -->
   <div id="title">
-    <a href="index.html"><img src = "Photos/Logo.png" id="game-logo"></h1></a>
+    <a href="index.html"><img src = "Photos/Logo.png" id="game-logo" alt="game-logo"></a>
   </div>
   <div id="game-instruct">Guess where the photographer is STANDING.</div>
   <!-- points and rounds display -->
@@ -25,7 +25,7 @@
   <!-- Image display -->
   <div id="content">
     <div id="picture">
-      <img src="Photos/Campus.jpg">
+      <img src="Photos/Campus.jpg" alt="Campus">
     </div>
     <!-- Maps -->
       <div id="map">
@@ -34,11 +34,11 @@
           <button class="collapsible">Mode</button>
           <div class="menucontent">
             <figure class = "menu-element" onclick="changeToDefault()">
-              <img src="Photos/default.png">
+              <img src="Photos/default.png" alt="default">
               <figcaption>Default</figcaption>
             </figure>
             <figure class = "menu-element" onclick = "changeToSatilite()">
-              <img src="Photos/satilite.png">
+              <img src="Photos/satilite.png" alt="satelite">
               <figcaption>Satilite</figcaption>
             </figure>
           </div>
@@ -50,14 +50,14 @@
     <div id = "distance"></div>
     <button id = "button" type="button">Submit Guess</button>
   </div>
-  <!-- Sumamry page -->""
+  <!-- Summary page -->
   <div id = "summary-page">
     <div id = "summary-content">
       <h1 id = score-Display></h1>
       <button id = "summary-button">Play Again</button>
     </div>
   </div>
-  <!-- Map Library -->>  
+  <!-- Map Library -->  
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
